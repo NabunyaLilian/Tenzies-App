@@ -1,4 +1,4 @@
-# Welcome to Tenzies App
+# Tenzies App
 
 A react based game application inspired by the Tenzies Dice game. How to win depends on the player rolling the dice until all dice have the same number.
 
