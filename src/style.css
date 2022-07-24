@@ -150,3 +150,14 @@ p{
     flex-direction: column;
     justify-content: space-between;
  }
+
+ .statics{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .statics span{
+    display: block;
+    margin-left: 20px;
+ }
+ 
