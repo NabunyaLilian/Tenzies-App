@@ -9,28 +9,31 @@ body{
 }
 
 main{
-    width: 60vh;
-    height: 60vh;
+    width: 80vh;
+    height: 70vh;
     border-radius: 10px;
     background-color: #F5F5F5;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25vh;
+    margin-top: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px;
 }
 
 .die-face{
-    height: 50px;
-    width: 50px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    padding: 5px;
+}
+
+.dice{
+    height: 50px;
+    width: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -42,6 +45,7 @@ main{
     display: grid;
     gap: 20px;
     grid-template-columns: auto auto auto  auto auto;
+    
 }
 
 button{
@@ -49,6 +53,7 @@ button{
     padding: 10px 0px;
     width: 200px;
     color: white;
+    margin-top: 20px;
     border: none;
     cursor: pointer;
     font-family: 'Karla', sans-serif;
@@ -67,3 +72,81 @@ p{
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.dot {
+       display: block;
+       width: 10px;
+       height: 10px;
+       border-radius: 50%;
+       background-color:black;
+    }
+    
+
+.first-face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-face{
+    display: flex;
+    justify-content : space-between;
+}
+
+.second-face .dot:nth-of-type(2) {
+    align-self: flex-end;
+    
+}
+
+.third-face{
+    display: flex;
+    justify-content : space-between;
+}
+
+
+.third-face .dot:nth-of-type(1) {
+   align-self :flex-end;
+    
+}
+
+.third-face .dot:nth-of-type(2) {
+    align-self :center;
+    
+}
+
+.fourth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+.fifth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+.fifth-face .column:nth-of-type(2) {
+    justify-content: center;
+}
+
+.sixth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sixth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
