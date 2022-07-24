@@ -14,7 +14,7 @@ export default function Die(props){
         backgroundColor: props.isHeld ? "#59E391" : "orange"
     }
 
-    console.log(props.value)
+    //console.log(props.value)
 
     return(
         <div

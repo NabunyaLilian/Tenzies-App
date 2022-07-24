@@ -9,6 +9,7 @@ export default function App(){
 
    const [dice, setDice] = React.useState(getNewDice())
    const [tenzies, setTenzies] = React.useState(false)
+   const [rolls, setRolls] = React.useState(0)
 
 
    React.useEffect(
@@ -48,12 +49,15 @@ export default function App(){
        if(tenzies){
             setDice(getNewDice())
             setTenzies(false)
+            setRolls(0)
        }else{
+            setRolls(preRolls => preRolls + 1)
             setDice(oldDice=> oldDice.map(die=>{
                 return die.isHeld? die: generateNewDie()
             }))
        };
    }
+   console.log(rolls)
 
    function holdDice(id){
        setDice(oldDice => oldDice.map(die=>{
@@ -76,6 +80,7 @@ export default function App(){
             {tenzies && <Confetti />}
             <h1 className="title">Tenzies</h1>
             <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+            <h3>Rolls: {rolls}</h3>
             <div className="dice-board">
                 {diceElements}
             </div>
