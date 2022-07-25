@@ -121,9 +121,19 @@ export default function App(){
     const best_time = localStorage.getItem('bestTime')
     const best_time_value = "0:"+ best_time
 
+    function useWindowSize(){
+        return(
+            {
+                width: window.screen.width,
+                height: window.screen.height
+            }
+        )
+    }
+    const { width, height } = useWindowSize()
+
     return (
         <main>
-            {tenzies && <Confetti />}
+            {tenzies && <Confetti  width={width} height={height}/>}
             <h1 className="title">Tenzies</h1>
             <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
             <h3 className="statics">
